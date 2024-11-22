@@ -9,7 +9,7 @@ function App() {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    const target = new Date('2024-12-31 23:59:59');
+    const target = new Date('2024-11-29 23:59:59');
 
     const interval = setInterval(() => {
       const now = new Date();
@@ -43,10 +43,10 @@ function App() {
   return (
     <div className="min-h-screen relative">
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1469827160215-9d29e96e72f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80")',
+          backgroundImage: 'url("https://images.pexels.com/photos/209251/pexels-photo-209251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
@@ -55,9 +55,12 @@ function App() {
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <Timer className="w-16 h-16 text-yellow-400 mx-auto mb-8" />
+          <div className="flex justify-center items-center translate-y-[-20px]">
+            <img src="../assets/imagotipo blanco - naranja.png" alt="Logo" className="w-60 h-15" />
+          </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Próximamente
+
           </h1>
           <p className="text-xl text-gray-200 mb-12">
             Estamos trabajando arduamente para traerte algo increíble. ¡Mantente atento!
@@ -72,7 +75,7 @@ function App() {
               { value: seconds, label: 'Segundos' }
             ].map((item) => (
               <div key={item.label} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-4xl font-bold text-yellow-400">
+                <div className="text-4xl font-bold text-[#FF800D]">
                   {item.value}
                 </div>
                 <div className="text-gray-300">{item.label}</div>
@@ -90,13 +93,13 @@ function App() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Tu correo electrónico"
-                  className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF800D]"
                   required
                 />
               </div>
               <button
                 type="submit"
-                className="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-yellow-300 transition-colors"
+                className="bg-[#FF800D] text-black font-semibold px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-[#1C19A9] transition-colors"
               >
                 Notifícame
                 <ArrowRight className="w-4 h-4" />
