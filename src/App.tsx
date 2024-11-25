@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Timer, Mail, ArrowRight } from 'lucide-react';
+import logotype from "./public/background.jpg";
 
 function App() {
   const [email, setEmail] = useState('');
@@ -44,19 +45,17 @@ function App() {
     <div className="min-h-screen relative">
       {/* Background Image with Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url("https://images.pexels.com/photos/209251/pexels-photo-209251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
-        }}
+        className="absolute inset-0 bg-cover bg-blend-black/50 background-color: black; bg-center bg-no-repeat md:bg-[url('https://images.pexels.com/photos/209251/pexels-photo-209251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-[url('./cell.jpg')]"
       >
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-blend-black/50"></div>
+        
       </div>
 
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4">
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex justify-center items-center translate-y-[-20px]">
-            <img src="../assets/imagotipo blanco - naranja.png" alt="Logo" className="w-60 h-15" />
+            <img className="w-60 h-15" src={logotype} alt="Logo"/>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Próximamente
